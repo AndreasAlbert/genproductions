@@ -1,0 +1,38 @@
+#put card customizations here (change top and higgs mass for example)
+#set param_card mass  5000001 MED
+#set param_card mass  5000521 XMASS
+#set param_card decay 5000001 auto
+
+
+#### Set all couplings to zero
+## GQV
+#set dminputs 4 0.0
+#set dminputs 5 0.0
+#set dminputs 6 0.0
+#set dminputs 7 0.0
+#set dminputs 8 0.0
+#set dminputs 9 0.0
+#
+## GLV
+#set dminputs 10 0.0
+#set dminputs 11 0.0
+#set dminputs 12 0.0
+#
+## GQA
+#set dminputs 13 0.0
+#set dminputs 14 0.0
+#set dminputs 15 0.0
+#set dminputs 16 0.0
+#set dminputs 17 0.0
+#set dminputs 18 0.0
+#
+## GLA
+#set dminputs 19 0.0
+#set dminputs 20 0.0
+#set dminputs 21 0.0
+#
+## GNU
+#set dminputs 22 0.0
+#set dminputs 23 0.0
+#set dminputs 24 0.0
+
