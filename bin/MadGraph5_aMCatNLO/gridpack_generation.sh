@@ -255,17 +255,9 @@ if [ ! -d ${AFS_GEN_FOLDER}/${name}_gridpack ]; then
       #get needed BSM model
       if [[ $model = *[!\ ]* ]]; then
         echo "Loading extra model $model"
-        wget --no-check-certificate https://cms-project-generators.web.cern.ch/cms-project-generators/$model	
+        wget --no-check-certificate http://feynrules.irmp.ucl.ac.be/raw-attachment/wiki/DMsimp/DMsimp_s_spin1_v2.1.zip	
         cd models
-        if [[ $model == *".zip"* ]]; then
-          unzip ../$model
-        elif [[ $model == *".tgz"* ]]; then
-          tar zxvf ../$model
-        elif [[ $model == *".tar"* ]]; then
-          tar xavf ../$model
-        else 
-          echo "A BSM model is specified but it is not in a standard archive (.zip or .tar)"
-        fi
+        unzip ../$model*zip
         cd ..
       fi
     done
@@ -461,6 +453,11 @@ if [ -e $CARDSDIR/${name}_reweight_card.dat ]; then
   cp $CARDSDIR/${name}_reweight_card.dat ./Cards/reweight_card.dat
 fi
 
+if [ -e $CARDSDIR/${name}_customizecards.dat ]; then
+  echo "copying custom customizecards file"
+  cp $CARDSDIR/${name}_customizecards.dat ./Cards/customizecards.dat
+fi
+
 
 #automatically detect NLO mode or LO mode from output directory
 isnlo=0
@@ -487,6 +484,7 @@ if [ "$isnlo" -gt "0" ]; then
   fi
   echo "done" >> makegrid.dat
 
+  cat makegrid.dat
   cat makegrid.dat | ./bin/generate_events -n pilotrun
   echo "finished pilot run"
 
