@@ -1,0 +1,11 @@
+import Pseudoscalar_2HDM
+# Define multiparticle labels
+define l+ = mu+ e+ ta+
+define l- = mu- e- ta-
+
+generate       g g  > xd xd~ l+ l- / a   [QCD]
+
+output Pseudoscalar2DHM_MonoZLL_scan1_mh2-400_mh4-300 
+
+
+
