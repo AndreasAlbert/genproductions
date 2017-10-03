@@ -3,9 +3,11 @@ import Pseudoscalar_2HDM
 define l+ = mu+ e+ ta+
 define l- = mu- e- ta-
 
+    define l+ = e+ mu+
+    define l- = e- mu-
 generate       g g  > xd xd~ l+ l- / a   [QCD]
 
-output Pseudoscalar2DHM_MonoZLL_scan1_mh2-400_mh4-300 
+output Pseudoscalar2DHM_MonoZLL_mScan_mh2-300_mh4-400 
 
 
 
