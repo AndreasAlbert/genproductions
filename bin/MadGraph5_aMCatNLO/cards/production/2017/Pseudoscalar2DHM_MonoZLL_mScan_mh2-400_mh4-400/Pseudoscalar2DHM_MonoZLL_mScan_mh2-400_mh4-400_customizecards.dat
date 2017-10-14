@@ -7,7 +7,7 @@ set param_card mhc 400
 set param_card sinp 0.35
 set param_card mh3 400
 set param_card laP1 3
-set param_card Mxd 1
+set param_card Mxd 10
 set param_card mh2 400
 set param_card mh4 400
 set param_card mh1 125
