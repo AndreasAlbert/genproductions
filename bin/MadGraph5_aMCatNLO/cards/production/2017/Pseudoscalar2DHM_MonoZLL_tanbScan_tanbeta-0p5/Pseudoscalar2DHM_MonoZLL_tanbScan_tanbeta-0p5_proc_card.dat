@@ -1,7 +1,5 @@
 import Pseudoscalar_2HDM
 # Define multiparticle labels
-define l+ = mu+ e+ ta+
-define l- = mu- e- ta-
 
     define l+ = e+ mu+
     define l- = e- mu-
