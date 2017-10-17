@@ -115,6 +115,7 @@ echo "queue: ${queue}"
 echo "scram_arch: ${scram_arch}"
 echo "cmssw_version: ${cmssw_version}"
 
+is5FlavorScheme=-1
 if [ -z ${iscmsconnect:+x} ]; then iscmsconnect=0; fi
 
 # CMS Connect runs git status inside its own script.
@@ -323,7 +324,14 @@ if [ ! -d ${AFS_GEN_FOLDER}/${name}_gridpack ]; then
   #Run the code-generation step to create the process directory
   ########################
 
+  # Used to figure out if 4F or 5F scheme
+  sed -i '$ a display multiparticles' ${name}_proc_card.dat
   ./$MGBASEDIRORIG/bin/mg5_aMC ${name}_proc_card.dat
+ 
+  is5FlavorScheme=0
+  if tail -n 20 $LOGFILE | grep -q -e "^p *=.*b\~.*b" -e "^p *=.*b.*b\~"; then
+    is5FlavorScheme=1
+  fi
 
    #*FIXME* workaround for broken set cluster_queue and run_mode handling
    if [ "$queue" != "condor" ]; then
