@@ -129,7 +129,7 @@ fi
 # Set a list of maxwalltime in minutes
 # Pilots maximum life is 48h or 2880 minutes
 if [ -z "$CONDOR_SET_MAXWALLTIMES" ]; then
-  export CONDOR_SET_MAXWALLTIMES="500,960,2160,2820"
+  export CONDOR_SET_MAXWALLTIMES="500,2820"
 fi
 
 ##########################
