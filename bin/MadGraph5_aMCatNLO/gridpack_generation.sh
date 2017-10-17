@@ -490,19 +490,19 @@ if grep -q -e "\$DEFAULT_PDF_SETS" -e "\$DEFAULT_PDF_MEMBERS" $CARDSDIR/${name}_
     if [ "$isnlo" -gt "0" ]; then
         if [ $is5FlavorScheme -eq 1 ]; then
             # 5F PDF
-                  sed "s/\$DEFAULT_PDF_SETS/306000/" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
+                  sed "s/\$DEFAULT_PDF_SETS/292200/" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
             sed -i "s/\$DEFAULT_PDF_MEMBERS/True/" ./Cards/run_card.dat
         else
             # 4F PDF
-                  sed "s/\$DEFAULT_PDF_SETS/320900/" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
+                  sed "s/\$DEFAULT_PDF_SETS/292000/" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
             sed -i "s/\$DEFAULT_PDF_MEMBERS/True/" ./Cards/run_card.dat
         fi
     elif [ "$isnlo" -eq "0" ]; then
         # 5F PDF
         if [ $is5FlavorScheme -eq 1 ]; then
-            sed "s/\$DEFAULT_PDF_SETS/306000/g" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
+            sed "s/\$DEFAULT_PDF_SETS/292200/g" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
         else
-            sed "s/\$DEFAULT_PDF_SETS/320900/g" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
+            sed "s/\$DEFAULT_PDF_SETS/292000/g" $CARDSDIR/${name}_run_card.dat > ./Cards/run_card.dat
         # 4F PDF
         fi
         sed -i "s/ *\$DEFAULT_PDF_MEMBERS.*=.*//g" ./Cards/run_card.dat
