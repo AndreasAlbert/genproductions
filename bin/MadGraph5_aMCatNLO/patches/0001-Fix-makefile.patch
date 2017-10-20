@@ -1,0 +1,27 @@
+From 77e9421bfe10212a1cb1c990bd24122ef3272ba6 Mon Sep 17 00:00:00 2001
+From: aalbert <albert@physik.rwth-aachen.de>
+Date: Fri, 20 Oct 2017 22:58:06 +0200
+Subject: [PATCH 1/2] Fix makefile.
+
+---
+ Template/loop_material/StandAlone/SubProcesses/makefile | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Template/loop_material/StandAlone/SubProcesses/makefile b/Template/loop_material/StandAlone/SubProcesses/makefile
+index d46d411..48c2a7b 100644
+--- a/Template/loop_material/StandAlone/SubProcesses/makefile
++++ b/Template/loop_material/StandAlone/SubProcesses/makefile
+@@ -94,6 +94,10 @@ $(CHECK_SA_BORN_SPLITORDERS):  check_sa_born_splitOrders.o $(patsubst $(DOTF),$(
+ $(DOTO) : $(DOTF) $(POLYNOMIAL) $(OLP_POLYNOMIAL)
+ 	$(FC) $(FFLAGS) -c $< -o $@ $(LOOP_INCLUDE)
+ 
++$(DOTO) : $(DOTF)
++	$(FC) $(FFLAGS) -c $< -o $@ $(LOOP_INCLUDE)
++
++
+ $(OLP): $(OLP_PROCESS) $(LIBS)
+ 	$(FC) -shared $(OLP_PROCESS) -o libMadLoop.$(dylibext) $(LINKLIBS)
+ 
+-- 
+2.7.4
+
