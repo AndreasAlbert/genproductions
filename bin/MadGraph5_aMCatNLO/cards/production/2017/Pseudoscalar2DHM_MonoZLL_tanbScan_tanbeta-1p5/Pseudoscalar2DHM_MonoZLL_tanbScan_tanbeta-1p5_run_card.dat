@@ -86,12 +86,12 @@
 #**********************************
 # BW cutoff (M+/-bwcutoff*Gamma)
 #**********************************
-  15000  = bwcutoff      ! (M+/-bwcutoff*Gamma)
+  15.0  = bwcutoff      ! (M+/-bwcutoff*Gamma)
 #**********************************************************
 # Apply pt/E/eta/dr/mij cuts on decay products or not
 # (note that etmiss/ptll/ptheavy/ht/sorted cuts always apply)
 #**********************************************************
-   T  = cut_decays    ! Cut decay products
+   F  = cut_decays    ! Cut decay products
 #*************************************************************
 # Number of helicities to sum per event (0 = all helicities)
 # 0 gives more stable result, but longer run time (needed for
@@ -185,7 +185,7 @@
 #*********************************************************************
 # Minimum and maximum pt for 4-momenta sum of leptons                *
 #*********************************************************************
- 50   = ptllmin  ! Minimum pt for 4-momenta sum of leptons(l and vl)
+  0   = ptllmin  ! Minimum pt for 4-momenta sum of leptons(l and vl)
  -1  = ptllmax  ! Maximum pt for 4-momenta sum of leptons(l and vl)
 #*********************************************************************
 # Inclusive cuts                                                     *

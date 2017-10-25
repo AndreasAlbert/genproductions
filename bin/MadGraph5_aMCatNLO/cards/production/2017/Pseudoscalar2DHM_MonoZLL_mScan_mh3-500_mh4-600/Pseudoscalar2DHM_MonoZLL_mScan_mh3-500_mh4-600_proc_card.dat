@@ -5,7 +5,7 @@ define l+ = e+ mu+
 define l- = e- mu-
 generate       p p > xd xd~ l+ l- [QCD]
 
-output Pseudoscalar2DHM_MonoZLL_tanbScan_tanbeta-1p5 
+output Pseudoscalar2DHM_MonoZLL_mScan_mh3-500_mh4-600 
 
 
 
