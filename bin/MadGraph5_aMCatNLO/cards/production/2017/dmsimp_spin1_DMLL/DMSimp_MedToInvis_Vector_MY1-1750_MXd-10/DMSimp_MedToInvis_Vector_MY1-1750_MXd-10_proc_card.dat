@@ -1,0 +1,10 @@
+import DMsimp_s_spin1
+# Define multiparticle labels
+
+generate       p p > xd xd~ [QCD]
+add process       p p > xd xd~ j[QCD]
+
+output DMSimp_MedToInvis_Vector_MY1-1750_MXd-10 
+
+
+
