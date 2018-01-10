@@ -2,15 +2,17 @@ set group_subprocesses Auto
 set ignore_six_quark_processes False
 set loop_optimized_output True
 set complex_mass_scheme False
-import model SM_LS0_LS1_UFO
+
 import model SM_LT012_UFO
-import model SM_LM0123_UFO
 define p = g u c d s b u~ c~ d~ s~ b~
 define j = p
-define l+ = e+ mu+ ta+
-define l- = e- mu- ta-
+define l+ = e+ mu+
+define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
 
-generate    p p > z mu+ mu- j j QED=5 QCD=0 NP=2
-output ZZjj_mumuvmvmjj_ewk_aQGCft_madspin2
+
+generate p p > e+ e- vm vm~ j j QCD=0 QED=5 NP>0
+add process p p > mu+ mu- ve ve~ j j QCD=0 QED=5 NP>0
+
+output ZZjj_mumuvmvmjj_ewk_aQGCft 
