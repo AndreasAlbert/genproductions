@@ -1,0 +1,10 @@
+import model sm-ckm
+#switch to diagonal ckm matrix if relevant for speed
+#import model sm-lepton_masses
+
+define l+ = e+ mu+
+define l- = e- mu-
+
+generate p p > z z, z > l+ l-, z > vl vl~
+
+output ZZTo2L2Nu_5F_LO -nojpeg
