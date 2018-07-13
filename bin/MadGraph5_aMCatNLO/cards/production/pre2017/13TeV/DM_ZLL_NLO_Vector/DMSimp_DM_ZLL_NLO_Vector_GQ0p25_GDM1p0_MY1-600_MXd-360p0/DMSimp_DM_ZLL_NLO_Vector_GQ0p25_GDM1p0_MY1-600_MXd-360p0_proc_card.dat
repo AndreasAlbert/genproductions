@@ -1,0 +1,12 @@
+import DMsimp_s_spin1
+# Define multiparticle labels
+
+define l+ = e+ mu+
+define l- = e- mu-
+generate       p p > z xd xd~ [QCD]
+add process       p p > z xd xd~ j [QCD]
+
+output DMSimp_DM_ZLL_NLO_Vector_GQ0p25_GDM1p0_MY1-600_MXd-360p0 -nojpeg
+
+
+
