@@ -1,6 +1,4 @@
 import model sm-ckm
-#switch to diagonal ckm matrix if relevant for speed
-#import model sm-lepton_masses
 
 define ell+ = e+ mu+ ta+
 define ell- = e- mu- ta-
