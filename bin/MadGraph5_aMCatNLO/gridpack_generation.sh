@@ -272,7 +272,12 @@ if [ ! -d ${AFS_GEN_FOLDER}/${name}_gridpack ]; then
   sed -i "s#INCLUDES = -I../include#INCLUDES = -I../include -I${BOOSTINCLUDES}#g" src/Makefile  
   PATH=`${LHAPDFCONFIG} --prefix`/bin:${PATH} make
   cd ..
-  
+
+  # Make sure to compile CutTools
+  cd vendor/CutTools
+  make
+  cd -
+
   #load extra models if needed
   if [ -e $CARDSDIR/${name}_extramodels.dat ]; then
     echo "Loading extra models specified in $CARDSDIR/${name}_extramodels.dat"
