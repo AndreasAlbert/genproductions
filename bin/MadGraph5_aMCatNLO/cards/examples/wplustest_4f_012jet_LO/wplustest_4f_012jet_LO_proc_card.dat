@@ -1,0 +1,10 @@
+import model sm-ckm
+
+define ell+ = e+ mu+ ta+
+define ell- = e- mu- ta-
+
+generate p p > w+, w+ > ell+ vl @0
+add process p p > w+ j, w+ > ell+ vl @0
+add process p p > w+ j j, w+ > ell+ vl @0
+
+output wplustest_4f_012jet_LO -nojpeg
