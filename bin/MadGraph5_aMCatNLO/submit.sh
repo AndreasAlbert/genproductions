@@ -8,6 +8,6 @@ for name in $(dir ${folder}); do
 	fi
 	echo "Submit $name"
 
-	nohup ./submit_cmsconnect_gridpack_generation.sh ${name} ${folder}/${name} > ${name}.debug 2>&1 &
+	nohup ./submit_cmsconnect_gridpack_generation.sh ${name} ${folder}/${name} 1 "8 Gb" > ${name}.debug 2>&1 &
 	break;
 done
