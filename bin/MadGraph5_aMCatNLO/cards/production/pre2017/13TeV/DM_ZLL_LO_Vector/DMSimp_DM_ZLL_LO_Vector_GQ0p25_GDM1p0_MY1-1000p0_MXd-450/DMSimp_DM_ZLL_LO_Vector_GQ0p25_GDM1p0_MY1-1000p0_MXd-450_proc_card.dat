@@ -1,0 +1,11 @@
+import DMsimp_s_spin1
+# Define multiparticle labels
+
+define l+ = e+ mu+
+define l- = e- mu-
+generate       p p > z xd xd~, z > l+ l-
+
+output DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_MY1-1000p0_MXd-450 -nojpeg
+
+
+
