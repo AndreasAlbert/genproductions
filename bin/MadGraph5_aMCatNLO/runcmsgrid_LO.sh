@@ -150,14 +150,6 @@ if [ "$domadspin" -gt "0" ] ; then
 fi
 mv process/$event_file process/madevent/Events/${runlabel}/events.lhe.gz
 
-# Add scale and PDF weights using systematics module
-#
-pushd process/madevent
-scalevars="--mur=1,2,0.5 --muf=1,2,0.5 --together=muf,mur,dyn --dyn=-1,1,2,3,4"
-
-echo "systematics $runlabel --remove_wgts=all --start_id=1001 $scalevars" | ./bin/madevent
-popd
-
 mv process/madevent/Events/${runlabel}/events.lhe.gz cmsgrid_final.lhe.gz
 gzip -d cmsgrid_final.lhe.gz
 
