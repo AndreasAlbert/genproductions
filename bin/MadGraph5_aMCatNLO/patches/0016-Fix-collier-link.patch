@@ -1,0 +1,24 @@
+From d0b4776f006c7bf83e818a79b43cc0dbf9b18064 Mon Sep 17 00:00:00 2001
+From: Andreas Albert <andreas.albert@cern.ch>
+Date: Wed, 5 Sep 2018 09:59:43 +0200
+Subject: [PATCH] Fix collier link.
+
+---
+ madgraph/interface/madgraph_interface.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/madgraph/interface/madgraph_interface.py b/madgraph/interface/madgraph_interface.py
+index 8638540..26178dc 100755
+--- a/madgraph/interface/madgraph_interface.py
++++ b/madgraph/interface/madgraph_interface.py
+@@ -5881,6 +5881,7 @@ MG5aMC that supports quadruple precision (typically g++ based on gcc 4.6+).""")
+             add_options.append('--mg5amc_py8_interface_tarball=%s'%\
+                                                    MG5aMC_PY8_interface_path)
+             add_options.extend(install_options['options_for_HEPToolsInstaller'])
++            add_options.append('--collier_tarball=https://collier.hepforge.org/downloads/collier-1.2.1.tar.gz')
+             if not any(opt.startswith('--logging=') for opt in add_options):
+                 add_options.append('--logging=%d' % logger.level)
+ 
+-- 
+2.17.1
+
