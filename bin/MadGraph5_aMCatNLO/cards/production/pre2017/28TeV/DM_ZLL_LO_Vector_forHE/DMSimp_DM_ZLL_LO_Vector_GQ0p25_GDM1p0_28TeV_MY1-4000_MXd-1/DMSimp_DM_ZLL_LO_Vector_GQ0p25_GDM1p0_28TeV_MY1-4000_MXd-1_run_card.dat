@@ -81,12 +81,7 @@
 #
 #**********************************************************
 # Automatic ptj and mjj cuts if xqcut > 0
-# (turn off for VBF and single top processes)5_GDM1p0_MY1-1750_MXd-1.debug
--rw-r--r-- 1 aalbert users 112K Sep 24 09:18 DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_MY1-1750_MXd-1.log
-drwxr-xr-x 3 aalbert users 4.0K Sep 24 09:13 DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_MY1-2000_MXd-1
--rw-r--r-- 1 aalbert users  99K Sep 24 09:12 DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_MY1-2000_MXd-1_codegen.log
--rw-r--r-- 1 aalbert users 8.6K Sep 24 09:16 DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_MY1-2000_MXd-1.debug
--rw-r--r-- 1 aalbert users 112K Sep 24 09:16 DMSimp_DM_ZLL_LO_Vector_GQ0p
+# (turn off for VBF and single top processes)
 #**********************************************************
    True  = auto_ptj_mjj  ! Automatic setting of ptj and mjj
 #**********************************************************
