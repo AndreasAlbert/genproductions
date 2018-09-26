@@ -1,8 +1,0 @@
-import sm
-
-define l+ = e+ mu+
-define l- = e- mu-
-
-generate p p > z vl vl~, z > l+ l-
-
-output ZZTo2L2Nu_28TeV -nojpeg

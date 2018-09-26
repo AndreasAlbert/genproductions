@@ -5,7 +5,7 @@ define l+ = e+ mu+
 define l- = e- mu-
 generate       p p > z xd xd~, z > l+ l-
 
-output DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_28TeV_MY1-10000_MXd-1 -nojpeg
+output DMSimp_DM_ZLL_LO_Vector_GQ0p25_GDM1p0_27TeV_MY1-10000_MXd-1 -nojpeg
 
 
 
