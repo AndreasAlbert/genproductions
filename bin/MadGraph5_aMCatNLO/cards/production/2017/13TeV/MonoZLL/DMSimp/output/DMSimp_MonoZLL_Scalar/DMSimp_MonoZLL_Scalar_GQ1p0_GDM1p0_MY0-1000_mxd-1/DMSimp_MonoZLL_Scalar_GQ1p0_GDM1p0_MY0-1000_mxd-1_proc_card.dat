@@ -1,4 +1,4 @@
-import DMsimp_s_spin0
+import DMsimp_s_spin0-noboson
 # Define multiparticle labels
 
 define l+ = e+ mu+

@@ -114,7 +114,7 @@ def create_dmsimp_spin0_monozll_cards_mass_scan():
     log.info("Writing DMSimp Pseudoscalar cards for mass scan.")
     cw = CardWriter("")
     cw.model = "DMsimp_s_spin0"
-
+    cw.restrict = "noboson"
     ### ma-mA scan
     constant = DMSimp_Spin0_ParameterPoint()
     constant.parameters["mxd"].value = 1
