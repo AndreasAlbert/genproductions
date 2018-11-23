@@ -134,28 +134,29 @@ generate       p p > l+ l- xd xd~ [QCD]
     cw.restrict = ""
     cw.name = "MonoZLL_NLO_Axial_GQ0p25_GDM1p0"
 
-   # Vector couplings betwen mediator and fermions
-    constant.parameters["gvxd"].value = 0
-    constant.parameters["gvxc"].value = 0
-    constant.parameters["gvd11"].value = 0
-    constant.parameters["gvu11"].value = 0
-    constant.parameters["gvd22"].value = 0
-    constant.parameters["gvu22"].value = 0
-    constant.parameters["gvd33"].value = 0
-    constant.parameters["gvu33"].value = 0
+    for p in cw.parameter_points:
+        # Vector couplings betwen mediator and fermions
+        p.parameters["gvxd"].value = 0
+        p.parameters["gvxc"].value = 0
+        p.parameters["gvd11"].value = 0
+        p.parameters["gvu11"].value = 0
+        p.parameters["gvd22"].value = 0
+        p.parameters["gvu22"].value = 0
+        p.parameters["gvd33"].value = 0
+        p.parameters["gvu33"].value = 0
 
-    # Vector couplings betwen mediator and bosons
-    constant.parameters["gVh"].value = 0
+        # Vector couplings betwen mediator and bosons
+        p.parameters["gVh"].value = 0
 
-    # Axial couplings betwen mediator and fermions
-    constant.parameters["gaxd"].value = 1
-    constant.parameters["gaxc"].value = 0
-    constant.parameters["gad11"].value = 0.25
-    constant.parameters["gau11"].value = 0.25
-    constant.parameters["gad22"].value = 0.25
-    constant.parameters["gau22"].value = 0.25
-    constant.parameters["gad33"].value = 0.25
-    constant.parameters["gau33"].value = 0.25
+        # Axial couplings betwen mediator and fermions
+        p.parameters["gaxd"].value = 1
+        p.parameters["gaxc"].value = 0
+        p.parameters["gad11"].value = 0.25
+        p.parameters["gau11"].value = 0.25
+        p.parameters["gad22"].value = 0.25
+        p.parameters["gau22"].value = 0.25
+        p.parameters["gad33"].value = 0.25
+        p.parameters["gau33"].value = 0.25
 
 
     cw.write_cards()

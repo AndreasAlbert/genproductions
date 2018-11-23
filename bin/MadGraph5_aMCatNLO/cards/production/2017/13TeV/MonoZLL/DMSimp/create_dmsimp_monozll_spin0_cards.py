@@ -143,7 +143,7 @@ generate       g g > xd xd~ l+ l- / h [QCD] @1
 
 
     for p in cw.parameter_points:
-        set_pseudo_coupling(constant)
+        set_scalar_coupling(p)
 
     cw.output_path = "./output/DMSimp_MonoZLL_Scalar/"
     cw.name = "MonoZLL_Scalar_GQ1p0_GDM1p0"
@@ -151,7 +151,7 @@ generate       g g > xd xd~ l+ l- / h [QCD] @1
 
 
     for p in cw.parameter_points:
-        set_pseudo_coupling(constant)
+        set_pseudo_coupling(p)
     cw.output_path = "./output/DMSimp_MonoZLL_Pseudo/"
     cw.name = "MonoZLL_Pseudo_GQ1p0_GDM1p0"
     cw.write_cards()
