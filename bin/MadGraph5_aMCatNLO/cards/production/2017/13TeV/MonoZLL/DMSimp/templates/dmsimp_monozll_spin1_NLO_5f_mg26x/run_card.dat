@@ -139,7 +139,7 @@
 # More specific cuts can be specified in SubProcesses/cuts.f           *
 #***********************************************************************
   0.0	= ptl ! Min lepton transverse momentum
-  -1.0	= etal ! Max lepton abs(pseudo-rap) (a value .lt.0 means no cut)
+  3.0	= etal ! Max lepton abs(pseudo-rap) (a value .lt.0 means no cut)
   0.0	= drll ! Min distance between opposite sign lepton pairs
   0.0	= drll_sf ! Min distance between opp. sign same-flavor lepton pairs
   0.0	= mll ! Min inv. mass of all opposite sign lepton pairs
