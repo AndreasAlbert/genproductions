@@ -1,0 +1,30 @@
+change rwgt_dir rwgt
+
+
+
+set gvd11 0.1
+set gvu11 0.1
+set gvd22 0.1
+set gvu22 0.1
+set gvd33 0.1
+set gvu33 0.1
+
+launch
+
+set gvd11 0.5
+set gvu11 0.5
+set gvd22 0.5
+set gvu22 0.5
+set gvd33 0.5
+set gvu33 0.5
+
+launch
+
+set gvd11 1.0
+set gvu11 1.0
+set gvd22 1.0
+set gvu22 1.0
+set gvd33 1.0
+set gvu33 1.0
+
+launch

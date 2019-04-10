@@ -1,7 +1,7 @@
 #import model loop_sm-ckm_no_b_mass
 #switch to diagonal ckm matrix if needed for speed
 
-import model EWdim6NLO-no_cmass_cwwwcbcw
+import model EWdim6NLO
 
 # 4f:
 define j = g u c d s u~ c~ d~ s~

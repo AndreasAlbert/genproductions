@@ -1,0 +1,11 @@
+#import model loop_sm-ckm_no_b_mass
+#switch to diagonal ckm matrix if needed for speed
+
+import model DMsimp_s_spin1 
+
+define j = g u c d s u~ c~ d~ s~
+define p = g u c d s u~ c~ d~ s~
+
+generate p p > y1 [QCD] @0
+
+output DMMedToJJ_madspin_reweight_NLO -nojpeg
