@@ -92,6 +92,7 @@ $DEFAULT_PDF_SETS = lhaid     ! if pdlabel=lhapdf, this is the lhapdf number
   2.0     = rw_Rscale_up     ! upper bound for ren scale variations
   0.5     = rw_Fscale_down   ! lower bound for fact scale variations
   2.0     = rw_Fscale_up     ! upper bound for fact scale variations
+ .true.   = store_rwgt_info
 $DEFAULT_PDF_MEMBERS = reweight_PDF     ! reweight to get PDF uncertainty
       ! First of the error PDF sets 
       ! Last of the error PDF sets
@@ -144,3 +145,5 @@ $DEFAULT_PDF_MEMBERS = reweight_PDF     ! reweight to get PDF uncertainty
 #***********************************************************************
  5 = maxjetflavor
 #***********************************************************************
+
+#
