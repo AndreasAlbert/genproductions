@@ -142,3 +142,4 @@ average = event_norm ! Normalize events to sum or average to the X sect.
 #***********************************************************************
  5 = maxjetflavor
 #***********************************************************************
+.true.   = store_rwgt_info
