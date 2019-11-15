@@ -158,15 +158,9 @@ make_gridpack () {
             #*FIXME* broken in mg_amc 2.4.0
     #         echo "set cluster_queue $queue" >> mgconfigscript
           fi 
-          if [ $iscmsconnect -gt 0 ]; then
     	  n_retries=10
     	  long_wait=300
     	  short_wait=120
-          else
-    	  n_retries=3
-    	  long_wait=60
-    	  short_wait=30
-          fi
           echo "set cluster_status_update $long_wait $short_wait" >> mgconfigscript
           echo "set cluster_nb_retry $n_retries" >> mgconfigscript
           echo "set cluster_retry_wait 300" >> mgconfigscript

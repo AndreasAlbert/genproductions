@@ -17,6 +17,20 @@ if [ -n "$CONDOR_DEBUG_OUTPUT_PATH" ]; then
   fi
 fi
 
+export PATH="$PATH:$condor_scratch/local_bin"
+export VO_CMS_SW_DIR=/cvmfs/cms.cern.ch
+export CONDOR_RELEASE_HOLDCODES="26:119,13,30:256,12:28,6:0"
+export CONDOR_RELEASE_HOLDCODES_SHADOW_LIM="19"
+export CONDOR_SET_MAXWALLTIMES="500,960,2160,2820"
+export CONDOR_QUERY_MAX_RETRIES="30"
+export CONDOR_QUERY_SLEEP_PER_RETRY="30"
+export _CONDOR_WantIOProxy=true
+export _CONDOR_SUBMIT_ATTRS="WantIOProxyd"
+export _CONDOR_IsGridpack=true
+export CONDOR_GRIDPACK_CARDNAME="${card_name}"
+export _CONDOR_SUBMIT_ATTRS="$CONDOR_SUBMIT_ATTRS WantIOProxy IsGridpack"
+export _CONDOR_SUBMIT_ATTRS="WantIOProxy IsGridpack"
+
 # http://batchdocs.web.cern.ch/batchdocs/local/lsfmigratepractical.html
 # espresso     = 20 minutes
 # microcentury = 1 hour
@@ -26,7 +40,6 @@ fi
 # testmatch    = 3 days
 # nextweek     = 1 week
 CONDOR_JOB_FLAVOUR="nextweek"
-
 if [[ "${HOSTNAME}" =~ "lxplus" ]] && [[ ! $(pwd) =~ "/afs/" ]]; then
     echo "You are submitting from lxplus and the local directory is not on AFS."
     echo "Automatically switch to condor spool mode."
@@ -45,3 +58,4 @@ fi
 scram_arch=$3
 cmssw_version=$4
 bash gridpack_generation.sh ${name} ${carddir} ${workqueue} ALL ${scram_arch} ${cmssw_version}
+# export CONDOR_CMS_DASHBOARD=False
