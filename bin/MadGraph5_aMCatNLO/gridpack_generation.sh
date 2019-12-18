@@ -394,6 +394,10 @@ make_gridpack () {
       echo "copying custom cuts.f file"
       cp $CARDSDIR/${name}_cuts.f ./SubProcesses/cuts.f
     fi
+    if [ -e $CARDSDIR/${name}_setcuts.f ]; then
+      echo "copying custom setcuts.f file"
+      cp $CARDSDIR/${name}_setcuts.f ./SubProcesses/setcuts.f
+    fi
     
     if [ -e $CARDSDIR/${name}_FKS_params.dat ]; then
       echo "copying custom FKS_params.dat file"
