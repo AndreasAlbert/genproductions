@@ -1,9 +1,0 @@
-import DMsimp_s_spin0
-# Define multiparticle labels
-
-generate       p p  > xd xd~ z   [QCD] @0
-
-output DMSimp_monoz_Pseudo_GQ1p0_GDM1p0_MY0-50p0_mxd-22p0 -nojpeg
-
-
-

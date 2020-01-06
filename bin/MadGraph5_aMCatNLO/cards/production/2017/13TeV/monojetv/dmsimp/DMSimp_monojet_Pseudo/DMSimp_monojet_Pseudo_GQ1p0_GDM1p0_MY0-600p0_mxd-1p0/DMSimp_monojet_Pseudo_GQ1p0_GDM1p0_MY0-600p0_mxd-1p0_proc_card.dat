@@ -1,9 +1,0 @@
-import DMsimp_s_spin0-noboson
-# Define multiparticle labels
-
-generate       g g > xd xd~ j / h [QCD] @1
-
-output DMSimp_monojet_Pseudo_GQ1p0_GDM1p0_MY0-600p0_mxd-1p0 -nojpeg
-
-
-
