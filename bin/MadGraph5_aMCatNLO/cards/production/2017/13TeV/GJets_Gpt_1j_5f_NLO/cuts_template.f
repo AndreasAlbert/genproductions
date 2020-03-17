@@ -317,7 +317,7 @@ c Loop over all photons
          passcuts_user=.false.
          return
       endif
-      if(ptg.gt.250)then
+      if(ptg.gt.@PHOTONPTMAX)then
          passcuts_user=.false.
          return
       endif
