@@ -1,0 +1,8 @@
+set param_card gq 0.25
+set param_card gx 0.1
+set param_card mdm 1
+set param_card mhs 500
+set param_card mzp 1500
+set param_card th 0.01
+set wHs AUTO
+set wZp AUTO

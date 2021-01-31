@@ -1,0 +1,7 @@
+import ZpHiggs_UFO
+# Define multiparticle labels
+
+define multiparticle v = w+ w- z
+generate  p p > zp > dm dm hs, hs > v v, v > j j
+
+output DarkHiggs_darkhiggs_vvqqqq_mzp-1500_mhs-160 -nojpeg
