@@ -5,5 +5,5 @@ define vl~ = ve~ vm~ vt~
 
 generate p p > l- vl~ j j / t t~ h QED=4 QCD=0
 
-output ewk_wmlvjj_5f_LO_INT -nojpeg
+output ewk_wmlvjj_5f_LO -nojpeg
 
